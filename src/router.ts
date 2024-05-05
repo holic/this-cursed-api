@@ -92,7 +92,11 @@ router.get("/orders", async () => {
           ? Math.max(0, record.fields.maxPlayers - completed.fields.count)
           : undefined,
       };
-    });
+    })
+    .filter(
+      (order) =>
+        order.remaining > 0 && order.expirationBlock > results.blockNumber
+    );
 
   return orders;
 });
