@@ -4,8 +4,8 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "start": "bun src/server.ts",
-    "dev": "bun --watch src/server.ts"
+    "start": "bun src/router.ts",
+    "dev": "bun --watch src/router.ts"
   },
   "devDependencies": {
     "@types/node": "^20.12.8",
@@ -17,7 +17,6 @@
     "@latticexyz/schema-type": "^2.0.7",
     "@latticexyz/store-sync": "^2.0.7",
     "@latticexyz/world": "^2.0.7",
-    "@whatwg-node/server": "^0.9.34",
     "itty-router": "^5.0.17"
   }
 }

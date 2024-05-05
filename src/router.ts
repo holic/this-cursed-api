@@ -1,5 +1,3 @@
-import { createServerAdapter } from "@whatwg-node/server";
-import { createServer } from "http";
 import { AutoRouter, createResponse } from "itty-router";
 import { createIndexerClient } from "@latticexyz/store-sync/indexer-client";
 import { unwrap } from "@latticexyz/common";
@@ -21,16 +19,14 @@ const indexerClient = createIndexerClient({
 });
 
 const router = AutoRouter({
-  format: createResponse("application/json; charset=utf-8", (data) => {
-    const body = JSON.stringify(
+  format: createResponse("application/json; charset=utf-8", (data) =>
+    JSON.stringify(
       data,
       (key: string, value: any) =>
         typeof value === "bigint" ? value.toString() : value,
       2
-    );
-    console.log("body length", body.length);
-    return body;
-  }),
+    )
+  ),
 });
 
 router.get("/", () => ({ message: "Have you eaten your $BUGS today?" }));
@@ -45,7 +41,6 @@ router.get("/orders", async () => {
       })),
     })
   );
-  console.log(results);
 
   const records = results.logs
     .map((log) => {
@@ -102,8 +97,4 @@ router.get("/orders", async () => {
   return orders;
 });
 
-const port = parseInt(process.env.PORT ?? "") || 3000;
-const server = createServer(createServerAdapter(router.fetch));
-server.listen(port, () => {
-  console.log(`listening on http://127.0.0.1:${port}`);
-});
+export default router;
