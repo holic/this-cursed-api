@@ -32,6 +32,12 @@ const router = AutoRouter({
 router.get("/", () => ({ message: "Have you eaten your $BUGS today?" }));
 
 router.get("/orders", async () => {
+  const metadata = await fetch(
+    "https://70kzkeor.api.sanity.io/v2023-10-23/data/query/production?query=*%5B_type+%3D%3D+%27material%27%5D%7B...%2C+hint-%3E%7D&returnQuery=false"
+  )
+    .then((res) => res.json())
+    .then((res) => res.result);
+
   const results = unwrap(
     await indexerClient.getLogs({
       chainId: 690,
@@ -74,22 +80,36 @@ router.get("/orders", async () => {
   const orders = records
     .filter((record) => record.table.tableId === config.tables.Order.tableId)
     .map((record) => {
-      const materialMetadata = records.find(
+      const order = record.fields;
+
+      const material = records.find(
         (r) =>
           r.table.tableId === config.tables.MaterialMetadata.tableId &&
           r.fields.materialId === record.fields.materialId
-      );
+      )?.fields;
+
+      const materialData = material
+        ? metadata.find((row) => row.materialType === material.name)
+        : undefined;
+
       const completed = records.find(
         (r) =>
           r.table.tableId === config.tables.CompletedPlayers.tableId &&
           r.fields.orderId === record.fields.orderId
-      );
+      )?.fields;
+
       return {
-        ...record.fields,
-        materialMetadata: materialMetadata?.fields,
-        completed: completed?.fields.count,
+        ...order,
+        orderNumber: parseInt(order.orderId.replace(/^0x/, ""), 16),
+        material: material
+          ? {
+              ...material,
+              metadata: materialData,
+            }
+          : undefined,
+        completed: completed?.count,
         remaining: completed
-          ? Math.max(0, record.fields.maxPlayers - completed.fields.count)
+          ? Math.max(0, order.maxPlayers - completed.count)
           : undefined,
       };
     })
