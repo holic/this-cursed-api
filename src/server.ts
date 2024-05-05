@@ -33,6 +33,8 @@ const router = AutoRouter({
   }),
 });
 
+router.get("/", () => ({ message: "Have you eaten your $BUGS today?" }));
+
 router.get("/orders", async () => {
   const results = unwrap(
     await indexerClient.getLogs({
