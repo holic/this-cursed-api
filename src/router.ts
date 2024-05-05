@@ -89,8 +89,8 @@ router.get("/orders", async () => {
         materialMetadata: materialMetadata?.fields,
         completed: completed?.fields.count,
         remaining: completed
-          ? record.fields.maxPlayers - completed.fields.count
-          : null,
+          ? Math.max(0, record.fields.maxPlayers - completed.fields.count)
+          : undefined,
       };
     });
 
