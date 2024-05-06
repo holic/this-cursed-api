@@ -11,6 +11,7 @@ import {
 } from "@latticexyz/protocol-parser/internal";
 import { isDefined } from "@latticexyz/common/utils";
 import { config } from "./mud.config.js";
+import materials from "./materials.json";
 
 const tables = Object.values(config.tables);
 
@@ -32,12 +33,6 @@ const router = AutoRouter({
 router.get("/", () => ({ message: "Have you eaten your $BUGS today?" }));
 
 router.get("/orders", async () => {
-  const metadata = await fetch(
-    "https://70kzkeor.api.sanity.io/v2023-10-23/data/query/production?query=*%5B_type+%3D%3D+%27material%27%5D%7B...%2C+hint-%3E%7D&returnQuery=false"
-  )
-    .then((res) => res.json())
-    .then((res) => res.result);
-
   const results = unwrap(
     await indexerClient.getLogs({
       chainId: 690,
@@ -89,7 +84,7 @@ router.get("/orders", async () => {
       )?.fields;
 
       const materialData = material
-        ? metadata.find((row) => row.materialType === material.name)
+        ? materials.find((row) => row.id === material.name)
         : undefined;
 
       const completed = records.find(
@@ -104,7 +99,7 @@ router.get("/orders", async () => {
         material: material
           ? {
               ...material,
-              metadata: materialData,
+              label: materialData?.name,
             }
           : undefined,
         completed: completed?.count,
