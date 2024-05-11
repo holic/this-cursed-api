@@ -1,23 +1,8 @@
 import { AutoRouter, createResponse } from "itty-router";
-import { createIndexerClient } from "@latticexyz/store-sync/indexer-client";
-import { unwrap } from "@latticexyz/common";
-import { flattenSchema } from "./flattenSchema.js";
-import {
-  decodeKey,
-  decodeValueArgs,
-  getKeySchema,
-  getValueSchema,
-  KeySchema,
-} from "@latticexyz/protocol-parser/internal";
-import { isDefined } from "@latticexyz/common/utils";
-import { config } from "./mud.config.js";
-import materials from "./materials.json";
-
-const tables = Object.values(config.tables);
-
-const indexerClient = createIndexerClient({
-  url: "https://indexer.mud.redstonechain.com",
-});
+import { config, machineType } from "./mud.config.js";
+import materialLabels from "./materials.json";
+import { fetchRecords } from "./fetchRecords.js";
+import { concatHex, keccak256 } from "viem";
 
 const router = AutoRouter({
   format: createResponse("application/json; charset=utf-8", (data) =>
@@ -33,44 +18,11 @@ const router = AutoRouter({
 router.get("/", () => ({ message: "Have you eaten your $BUGS today?" }));
 
 router.get("/orders", async () => {
-  const results = unwrap(
-    await indexerClient.getLogs({
-      chainId: 690,
-      address: "0x4ab7e8b94347cb0236e3de126db9c50599f7db2d",
-      filters: tables.map((table) => ({
-        tableId: table.tableId,
-      })),
-    })
-  );
-
-  const records = results.logs
-    .map((log) => {
-      if (log.eventName !== "Store_SetRecord") {
-        throw new Error(`Unexpected log type from indexer: ${log.eventName}`);
-      }
-
-      const table = tables.find((table) => table.tableId === log.args.tableId);
-      if (!table) return;
-
-      config.tables.Order;
-
-      const keySchema = flattenSchema(getKeySchema(table));
-      const key = decodeKey(keySchema as KeySchema, log.args.keyTuple);
-      const value = decodeValueArgs(
-        flattenSchema(getValueSchema(table)),
-        log.args
-      );
-
-      return {
-        table,
-        keyTuple: log.args.keyTuple,
-        primaryKey: Object.values(key),
-        key,
-        value,
-        fields: { ...key, ...value },
-      };
-    })
-    .filter(isDefined);
+  const { records, blockNumber } = await fetchRecords([
+    config.tables.Order,
+    config.tables.MaterialMetadata,
+    config.tables.CompletedPlayers,
+  ]);
 
   const orders = records
     .filter((record) => record.table.tableId === config.tables.Order.tableId)
@@ -84,7 +36,7 @@ router.get("/orders", async () => {
       )?.fields;
 
       const materialData = material
-        ? materials.find((row) => row.id === material.name)
+        ? materialLabels.find((row) => row.name === material.name)
         : undefined;
 
       const completed = records.find(
@@ -99,7 +51,7 @@ router.get("/orders", async () => {
         material: material
           ? {
               ...material,
-              label: materialData?.name,
+              label: materialData?.label,
             }
           : undefined,
         completed: completed?.count,
@@ -109,11 +61,66 @@ router.get("/orders", async () => {
       };
     })
     .filter(
-      (order) =>
-        order.remaining > 0 && order.expirationBlock > results.blockNumber
+      (order) => order.remaining > 0 && order.expirationBlock > blockNumber
     );
 
   return orders;
+});
+
+router.get("/recipes", async () => {
+  const { records } = await fetchRecords([
+    config.tables.Recipe,
+    config.tables.MaterialMetadata,
+  ]);
+
+  const materials = records
+    .filter(
+      (record) =>
+        record.table.tableId === config.tables.MaterialMetadata.tableId
+    )
+    .map((record) => ({
+      ...record.fields,
+      label: materialLabels.find((row) => row.name === record.fields.name)
+        ?.label,
+    }));
+
+  const materialCombos = [
+    ...materials.map((material) => ({
+      inputHash: keccak256(material.materialId),
+      materials: [material],
+    })),
+    ...materials.flatMap((firstMaterial) =>
+      materials.map((secondMaterial) => {
+        const combo = [firstMaterial, secondMaterial];
+        combo.sort((a, b) => a.materialId.localeCompare(b.materialId));
+        return {
+          inputHash: keccak256(
+            concatHex(combo.map((material) => material.materialId))
+          ),
+          materials: combo,
+        };
+      })
+    ),
+  ];
+
+  const recipes = records
+    .filter((record) => record.table.tableId === config.tables.Recipe.tableId)
+    .map((record) => {
+      const machine = machineType[record.fields.machine];
+
+      const outputs = record.fields.outputs.map((output) =>
+        materials.find((material) => material.materialId === output)
+      );
+
+      const inputHash = record.fields.input;
+      const input = materialCombos.find(
+        (combo) => combo.inputHash === inputHash
+      )?.materials;
+
+      return { inputHash, input, machine, outputs };
+    });
+
+  return recipes;
 });
 
 export default router;

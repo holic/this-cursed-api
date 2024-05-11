@@ -7,9 +7,25 @@ export const materialDifficulty = [
   "nightmare",
 ] as const;
 
+export const machineType = [
+  "NONE",
+  "INLET",
+  "OUTLET",
+  "PLAYER",
+  "SPLITTER",
+  "MIXER",
+  "DRYER",
+  "BOILER",
+  "CENTRIFUGE",
+  "GRINDER",
+  "RAT_CAGE",
+  "MEALWORM_VAT",
+] as const;
+
 export const config = defineWorld({
   enums: {
     materialDifficulty,
+    machineType,
   },
   tables: {
     MaterialMetadata: {
@@ -40,6 +56,14 @@ export const config = defineWorld({
       schema: {
         orderId: "bytes32",
         count: "uint32",
+      },
+    },
+    Recipe: {
+      key: ["machine", "input"],
+      schema: {
+        machine: "machineType",
+        input: "bytes32", // Material combination id
+        outputs: "bytes14[2]",
       },
     },
   },

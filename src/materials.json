@@ -1,558 +1,558 @@
 [
   {
-    "id": "ADRENOCHROME",
-    "name": "Adrenochrome"
+    "name": "ADRENOCHROME",
+    "label": "Adrenochrome"
   },
   {
-    "id": "AMMONIA",
-    "name": "Quality Chemical Clear Ammonia "
+    "name": "AMMONIA",
+    "label": "Quality Chemical Clear Ammonia"
   },
   {
-    "id": "AMPHETAMINE",
-    "name": "Low-grade Amphetamine"
+    "name": "AMPHETAMINE",
+    "label": "Low-grade Amphetamine"
   },
   {
-    "id": "ANABOLIC_STEROID",
-    "name": "Anabolic Steroid"
+    "name": "ANABOLIC_STEROID",
+    "label": "Anabolic Steroid"
   },
   {
-    "id": "ANTIFREEZE",
-    "name": "RV/Marine Antifreeze"
+    "name": "ANTIFREEZE",
+    "label": "RV/Marine Antifreeze"
   },
   {
-    "id": "ARTIFICIAL_SWEET",
-    "name": "Equal ® 0 Calorie Artificial Sweetener"
+    "name": "ARTIFICIAL_SWEET",
+    "label": "Equal ® 0 Calorie Artificial Sweetener"
   },
   {
-    "id": "ASPHALT",
-    "name": "Asphalt"
+    "name": "ASPHALT",
+    "label": "Asphalt"
   },
   {
-    "id": "BACTERIA",
-    "name": "Bacteria"
+    "name": "BACTERIA",
+    "label": "Bacteria"
   },
   {
-    "id": "BATTERY_ACID",
-    "name": "Battery Acid (Sulfuric Acid)"
+    "name": "BATTERY_ACID",
+    "label": "Battery Acid (Sulfuric Acid)"
   },
   {
-    "id": "BENZENE",
-    "name": "Benzene"
+    "name": "BENZENE",
+    "label": "Benzene"
   },
   {
-    "id": "BIG_RATS",
-    "name": "Big Rats"
+    "name": "BIG_RATS",
+    "label": "Big Rats"
   },
   {
-    "id": "BILE_ACID",
-    "name": "Bile Acid"
+    "name": "BILE_ACID",
+    "label": "Bile Acid"
   },
   {
-    "id": "BITUMEN",
-    "name": "Wellbank Bitumen"
+    "name": "BITUMEN",
+    "label": "Wellbank Bitumen"
   },
   {
-    "id": "BLOOD",
-    "name": "Blood"
+    "name": "BLOOD",
+    "label": "Blood"
   },
   {
-    "id": "BLOOD_CLOTS",
-    "name": "Blood Clots"
+    "name": "BLOOD_CLOTS",
+    "label": "Blood Clots"
   },
   {
-    "id": "BLOOD_MEAL",
-    "name": "Blood Meal"
+    "name": "BLOOD_MEAL",
+    "label": "Blood Meal"
   },
   {
-    "id": "BLUE-CHEESE",
-    "name": "Stilton Blue-cheese AOP"
+    "name": "BLUE-CHEESE",
+    "label": "Stilton Blue-cheese AOP"
   },
   {
-    "id": "BLUE-WHITE_MOLD",
-    "name": "Blue-white Mold Culture"
+    "name": "BLUE-WHITE_MOLD",
+    "label": "Blue-white Mold Culture"
   },
   {
-    "id": "BRENT_CRUDE",
-    "name": "Brent Crude Oil"
+    "name": "BRENT_CRUDE",
+    "label": "Brent Crude Oil"
   },
   {
-    "id": "BUG_FLOUR",
-    "name": "Bug Flour"
+    "name": "BUG_FLOUR",
+    "label": "Bug Flour"
   },
   {
-    "id": "BUGS",
-    "name": "Bugs"
+    "name": "BUGS",
+    "label": "Bugs"
   },
   {
-    "id": "CAFFEINE",
-    "name": "Lab Alley Caffeine Powder"
+    "name": "CAFFEINE",
+    "label": "Lab Alley Caffeine Powder"
   },
   {
-    "id": "CAFFEINE_GUM",
-    "name": "NeuroGum Energy Caffeine Gum"
+    "name": "CAFFEINE_GUM",
+    "label": "NeuroGum Energy Caffeine Gum"
   },
   {
-    "id": "CAFFEINE_SOLUTION",
-    "name": "The Ordinary Caffeine Solution 5% + EGCG"
+    "name": "CAFFEINE_SOLUTION",
+    "label": "The Ordinary Caffeine Solution 5% + EGCG"
   },
   {
-    "id": "CELLOPHANE",
-    "name": "MorePack Cellophane Wrapper"
+    "name": "CELLOPHANE",
+    "label": "MorePack Cellophane Wrapper"
   },
   {
-    "id": "CELLULOSE",
-    "name": "Bacterial Cellulose"
+    "name": "CELLULOSE",
+    "label": "Bacterial Cellulose"
   },
   {
-    "id": "CHEWING_GUM",
-    "name": "5 Gum Spearmint Rain Chewing Gum"
+    "name": "CHEWING_GUM",
+    "label": "5 Gum Spearmint Rain Chewing Gum"
   },
   {
-    "id": "CHIPS",
-    "name": "Lay's Chips Cheese Onion"
+    "name": "CHIPS",
+    "label": "Lay's Chips Cheese Onion"
   },
   {
-    "id": "CIGARETTE_JUICE",
-    "name": "Cigarette Juice"
+    "name": "CIGARETTE_JUICE",
+    "label": "Cigarette Juice"
   },
   {
-    "id": "CLUB_MATE",
-    "name": "Club Mate"
+    "name": "CLUB_MATE",
+    "label": "Club Mate"
   },
   {
-    "id": "CONTAMINATE",
-    "name": "Contaminated Water"
+    "name": "CONTAMINATE",
+    "label": "Contaminated Water"
   },
   {
-    "id": "CORN",
-    "name": "Corn "
+    "name": "CORN",
+    "label": "Corn"
   },
   {
-    "id": "CORN_STARCH",
-    "name": "Corn Starch"
+    "name": "CORN_STARCH",
+    "label": "Corn Starch"
   },
   {
-    "id": "CORN_STEEP",
-    "name": "Corn Steep Liquor (CSL)"
+    "name": "CORN_STEEP",
+    "label": "Corn Steep Liquor (CSL)"
   },
   {
-    "id": "CORN_SYRUP",
-    "name": "Pearl Milling™ Corn Syrup"
+    "name": "CORN_SYRUP",
+    "label": "Pearl Milling™ Corn Syrup"
   },
   {
-    "id": "CPU",
-    "name": "Central Processing Unit (CPU)"
+    "name": "CPU",
+    "label": "Central Processing Unit (CPU)"
   },
   {
-    "id": "CPU",
-    "name": "Central Processing Unit (CPU)"
+    "name": "CPU",
+    "label": "Central Processing Unit (CPU)"
   },
   {
-    "id": "CYCLOHEXANE",
-    "name": "Cyclohexane"
+    "name": "CYCLOHEXANE",
+    "label": "Cyclohexane"
   },
   {
-    "id": "DEAD_RATS",
-    "name": "Dried Dead Rats"
+    "name": "DEAD_RATS",
+    "label": "Dried Dead Rats"
   },
   {
-    "id": "DIAPER",
-    "name": "LivDry® Diaper"
+    "name": "DIAPER",
+    "label": "LivDry® Diaper"
   },
   {
-    "id": "DISPENSER",
-    "name": "Electronic Medical Dispenser"
+    "name": "DISPENSER",
+    "label": "Electronic Medical Dispenser"
   },
   {
-    "id": "DUST",
-    "name": "Dust"
+    "name": "DUST",
+    "label": "Dust"
   },
   {
-    "id": "E-LIQUID",
-    "name": "ElfLiq Watermelon Vape Juice"
+    "name": "E-LIQUID",
+    "label": "ElfLiq Watermelon Vape Juice"
   },
   {
-    "id": "ELECTRODES",
-    "name": "Electrodes"
+    "name": "ELECTRODES",
+    "label": "Electrodes"
   },
   {
-    "id": "ENERGY_CONCENTRATE",
-    "name": "Energy Concentrate"
+    "name": "ENERGY_CONCENTRATE",
+    "label": "Energy Concentrate"
   },
   {
-    "id": "EPIPEN",
-    "name": "BRAND Epipen"
+    "name": "EPIPEN",
+    "label": "BRAND Epipen"
   },
   {
-    "id": "ERASERBABY",
-    "name": "Eraserbaby"
+    "name": "ERASERBABY",
+    "label": "Eraserbaby"
   },
   {
-    "id": "ETHANOL",
-    "name": "Ethanol"
+    "name": "ETHANOL",
+    "label": "Ethanol"
   },
   {
-    "id": "ETHER",
-    "name": "Ether"
+    "name": "ETHER",
+    "label": "Ether"
   },
   {
-    "id": "EVIAN",
-    "name": "evian® Natural Spring Water"
+    "name": "EVIAN",
+    "label": "evian® Natural Spring Water"
   },
   {
-    "id": "FAT",
-    "name": "Congealed Fat"
+    "name": "FAT",
+    "label": "Congealed Fat"
   },
   {
-    "id": "FERTILIZER",
-    "name": "Fertilizer"
+    "name": "FERTILIZER",
+    "label": "Fertilizer"
   },
   {
-    "id": "GASOLINE",
-    "name": "Gasoline"
+    "name": "GASOLINE",
+    "label": "Gasoline"
   },
   {
-    "id": "GELATINE",
-    "name": "Unflavored Gelatine - Knox ®"
+    "name": "GELATINE",
+    "label": "Unflavored Gelatine - Knox ®"
   },
   {
-    "id": "GLASS",
-    "name": "Glass"
+    "name": "GLASS",
+    "label": "Glass"
   },
   {
-    "id": "GLUE",
-    "name": "Glue"
+    "name": "GLUE",
+    "label": "Glue"
   },
   {
-    "id": "GLYCINE",
-    "name": "Glycine-Pharmaceutical Standard"
+    "name": "GLYCINE",
+    "label": "Glycine-Pharmaceutical Standard"
   },
   {
-    "id": "GROWN_PARASITES",
-    "name": "Growth Enhanced Parasites"
+    "name": "GROWN_PARASITES",
+    "label": "Growth Enhanced Parasites"
   },
   {
-    "id": "GRUEL",
-    "name": "Avonmore Nutrient Gruel"
+    "name": "GRUEL",
+    "label": "Avonmore Nutrient Gruel"
   },
   {
-    "id": "HDPE",
-    "name": "High density polyethylene (HDPE)"
+    "name": "HDPE",
+    "label": "High density polyethylene (HDPE)"
   },
   {
-    "id": "HEAVY_OIL",
-    "name": "Heavy Oil"
+    "name": "HEAVY_OIL",
+    "label": "Heavy Oil"
   },
   {
-    "id": "HEB",
-    "name": "Hormonally Enhanced Bugs (HEBs)"
+    "name": "HEB",
+    "label": "Hormonally Enhanced Bugs (HEBs)"
   },
   {
-    "id": "HEMATURIC",
-    "name": "Caffeinated Hematuric Fluid"
+    "name": "HEMATURIC",
+    "label": "Caffeinated Hematuric Fluid"
   },
   {
-    "id": "HORMONES",
-    "name": "Human Growth Hormone (hGH)"
+    "name": "HORMONES",
+    "label": "Human Growth Hormone (hGH)"
   },
   {
-    "id": "IMPLANT",
-    "name": "Subcutaneous Implant"
+    "name": "IMPLANT",
+    "label": "Subcutaneous Implant"
   },
   {
-    "id": "INSULIN",
-    "name": "Insulin Liquid Solution"
+    "name": "INSULIN",
+    "label": "Insulin Liquid Solution"
   },
   {
-    "id": "IPHONE",
-    "name": "iPhone Refurbished"
+    "name": "IPHONE",
+    "label": "iPhone Refurbished"
   },
   {
-    "id": "JERKY",
-    "name": "Perky Jerky - Protein Jerky"
+    "name": "JERKY",
+    "label": "Perky Jerky - Protein Jerky"
   },
   {
-    "id": "JUUL",
-    "name": "Juul Vaporizer"
+    "name": "JUUL",
+    "label": "Juul Vaporizer"
   },
   {
-    "id": "LATEX",
-    "name": "Latex"
+    "name": "LATEX",
+    "label": "Latex"
   },
   {
-    "id": "LIPOPROTEIN",
-    "name": "Lipoprotein"
+    "name": "LIPOPROTEIN",
+    "label": "Lipoprotein"
   },
   {
-    "id": "LUBRICANT",
-    "name": "Industrial Lubricant"
+    "name": "LUBRICANT",
+    "label": "Industrial Lubricant"
   },
   {
-    "id": "M-150",
-    "name": "M-150 Energy Drink"
+    "name": "M-150",
+    "label": "M-150 Energy Drink"
   },
   {
-    "id": "MARGARINE",
-    "name": "SmartBalance Buttery Margarine"
+    "name": "MARGARINE",
+    "label": "SmartBalance Buttery Margarine"
   },
   {
-    "id": "MEDICAL_WASTE",
-    "name": "Medical Waste"
+    "name": "MEDICAL_WASTE",
+    "label": "Medical Waste"
   },
   {
-    "id": "MICROPLASTICS",
-    "name": "Microplastics, Waste"
+    "name": "MICROPLASTICS",
+    "label": "Microplastics, Waste"
   },
   {
-    "id": "MINERALS",
-    "name": "Minerals"
+    "name": "MINERALS",
+    "label": "Minerals"
   },
   {
-    "id": "MSG",
-    "name": "Ajinomoto ® Monosodium Glutamate (MSG)"
+    "name": "MSG",
+    "label": "Ajinomoto ® Monosodium Glutamate (MSG)"
   },
   {
-    "id": "MUCUS",
-    "name": "Mucus"
+    "name": "MUCUS",
+    "label": "Mucus"
   },
   {
-    "id": "NEURALINK",
-    "name": "Neuralink Brain-Computer Interface"
+    "name": "NEURALINK",
+    "label": "Neuralink Brain-Computer Interface"
   },
   {
-    "id": "NEURONS",
-    "name": "Neurons"
+    "name": "NEURONS",
+    "label": "Neurons"
   },
   {
-    "id": "NICOTINE",
-    "name": "PurNic™ Nicotine"
+    "name": "NICOTINE",
+    "label": "PurNic™ Nicotine"
   },
   {
-    "id": "NICOTINE_PATCH",
-    "name": "Nicorette® Nicotine Patch"
+    "name": "NICOTINE_PATCH",
+    "label": "Nicorette® Nicotine Patch"
   },
   {
-    "id": "NYLON_6",
-    "name": "Nylon-6 Chips (Gujlon)"
+    "name": "NYLON_6",
+    "label": "Nylon-6 Chips (Gujlon)"
   },
   {
-    "id": "ORB",
-    "name": "Orb"
+    "name": "ORB",
+    "label": "Orb"
   },
   {
-    "id": "ORGANIC_WASTE",
-    "name": "Organic Waste"
+    "name": "ORGANIC_WASTE",
+    "label": "Organic Waste"
   },
   {
-    "id": "OZEMPIC",
-    "name": "Novo Nordisk Ozempic®"
+    "name": "OZEMPIC",
+    "label": "Novo Nordisk Ozempic®"
   },
   {
-    "id": "PANINI",
-    "name": "Tesco Deli Panini"
+    "name": "PANINI",
+    "label": "Tesco Deli Panini"
   },
   {
-    "id": "PANKO",
-    "name": "Samlip Panko Breadcrumbs"
+    "name": "PANKO",
+    "label": "Samlip Panko Breadcrumbs"
   },
   {
-    "id": "PARASITES",
-    "name": "Parasites"
+    "name": "PARASITES",
+    "label": "Parasites"
   },
   {
-    "id": "PELLETS",
-    "name": "Corn Pellets"
+    "name": "PELLETS",
+    "label": "Corn Pellets"
   },
   {
-    "id": "PENICILLIN",
-    "name": "Pentids 400 Penicillin"
+    "name": "PENICILLIN",
+    "label": "Pentids 400 Penicillin"
   },
   {
-    "id": "PETROLEUM",
-    "name": "Petroleum"
+    "name": "PETROLEUM",
+    "label": "Petroleum"
   },
   {
-    "id": "PHA",
-    "name": "Polyhydroxyalkanoate (PHA) Granules"
+    "name": "PHA",
+    "label": "Polyhydroxyalkanoate (PHA) Granules"
   },
   {
-    "id": "PISS",
-    "name": "Piss"
+    "name": "PISS",
+    "label": "Piss"
   },
   {
-    "id": "PLASMA",
-    "name": "Plasma"
+    "name": "PLASMA",
+    "label": "Plasma"
   },
   {
-    "id": "PLASMA_POWDER",
-    "name": "Plasma Powder"
+    "name": "PLASMA_POWDER",
+    "label": "Plasma Powder"
   },
   {
-    "id": "PROBIOTICS",
-    "name": "Probiotics"
+    "name": "PROBIOTICS",
+    "label": "Probiotics"
   },
   {
-    "id": "PROZAC",
-    "name": "Prozac ®"
+    "name": "PROZAC",
+    "label": "Prozac ®"
   },
   {
-    "id": "PURE_LUBE",
-    "name": "Texaco Purified Lubricant"
+    "name": "PURE_LUBE",
+    "label": "Texaco Purified Lubricant"
   },
   {
-    "id": "RAT_KING",
-    "name": "Rat King"
+    "name": "RAT_KING",
+    "label": "Rat King"
   },
   {
-    "id": "RATS",
-    "name": "Rat Babies"
+    "name": "RATS",
+    "label": "Rat Babies"
   },
   {
-    "id": "REMOTE_BUG",
-    "name": "Remote Controlled Bug"
+    "name": "REMOTE_BUG",
+    "label": "Remote Controlled Bug"
   },
   {
-    "id": "RESIN",
-    "name": "Resin"
+    "name": "RESIN",
+    "label": "Resin"
   },
   {
-    "id": "ROASTED_TOBACCO",
-    "name": "American Spirit Original Blend Tobacco"
+    "name": "ROASTED_TOBACCO",
+    "label": "American Spirit Original Blend Tobacco"
   },
   {
-    "id": "RUBBER",
-    "name": "Rubber, Waste"
+    "name": "RUBBER",
+    "label": "Rubber, Waste"
   },
   {
-    "id": "SALT",
-    "name": "Amazon Basics Epson Salt"
+    "name": "SALT",
+    "label": "Amazon Basics Epson Salt"
   },
   {
-    "id": "SALT WATER",
-    "name": "Salt Water"
+    "name": "SALT WATER",
+    "label": "Salt Water"
   },
   {
-    "id": "SAND",
-    "name": "Sand"
+    "name": "SAND",
+    "label": "Sand"
   },
   {
-    "id": "SAUSAGE",
-    "name": "Pork and Black Pudding Sausages"
+    "name": "SAUSAGE",
+    "label": "Pork and Black Pudding Sausages"
   },
   {
-    "id": "SAUSAGE_SANDWICH",
-    "name": "Tesco Finest Sausage Panini"
+    "name": "SAUSAGE_SANDWICH",
+    "label": "Tesco Finest Sausage Panini"
   },
   {
-    "id": "SEMAGLUTIDE",
-    "name": "Semaglutide Injection"
+    "name": "SEMAGLUTIDE",
+    "label": "Semaglutide Injection"
   },
   {
-    "id": "SILICA",
-    "name": "Silica Gel"
+    "name": "SILICA",
+    "label": "Silica Gel"
   },
   {
-    "id": "SILICON_WAFER",
-    "name": "Silicon Wafer"
+    "name": "SILICON_WAFER",
+    "label": "Silicon Wafer"
   },
   {
-    "id": "SKIN_CREME",
-    "name": "Nivea Skin Creme"
+    "name": "SKIN_CREME",
+    "label": "Nivea Skin Creme"
   },
   {
-    "id": "SLUDGE",
-    "name": "Sludge"
+    "name": "SLUDGE",
+    "label": "Sludge"
   },
   {
-    "id": "SMIRNOFF",
-    "name": "Smirnoff Ice"
+    "name": "SMIRNOFF",
+    "label": "Smirnoff Ice"
   },
   {
-    "id": "SOAP",
-    "name": "Aesop © Aromatique Hand Soap"
+    "name": "SOAP",
+    "label": "Aesop © Aromatique Hand Soap"
   },
   {
-    "id": "SOAP",
-    "name": "Aesop © Aromatique Hand Soap "
+    "name": "SOAP",
+    "label": "Aesop © Aromatique Hand Soap"
   },
   {
-    "id": "SOLAR_CELL",
-    "name": "Solar Cell AllPower"
+    "name": "SOLAR_CELL",
+    "label": "Solar Cell AllPower"
   },
   {
-    "id": "SOUP",
-    "name": "Maggi Chicken Soup Base"
+    "name": "SOUP",
+    "label": "Maggi Chicken Soup Base"
   },
   {
-    "id": "STYROFOAM",
-    "name": "Styrofoam"
+    "name": "STYROFOAM",
+    "label": "Styrofoam"
   },
   {
-    "id": "SUPPLEMENT",
-    "name": "BioTechUSA ® Caffeine + Taurine Supplement"
+    "name": "SUPPLEMENT",
+    "label": "BioTechUSA ® Caffeine + Taurine Supplement"
   },
   {
-    "id": "SWEAT",
-    "name": "Stump Sweat"
+    "name": "SWEAT",
+    "label": "Stump Sweat"
   },
   {
-    "id": "SYNTH_MUSK",
-    "name": "Synthetic Musk"
+    "name": "SYNTH_MUSK",
+    "label": "Synthetic Musk"
   },
   {
-    "id": "TAR",
-    "name": "Tar"
+    "name": "TAR",
+    "label": "Tar"
   },
   {
-    "id": "TAURINE",
-    "name": "nutricost Taurine"
+    "name": "TAURINE",
+    "label": "nutricost Taurine"
   },
   {
-    "id": "TOBACCO",
-    "name": "Tobacco"
+    "name": "TOBACCO",
+    "label": "Tobacco"
   },
   {
-    "id": "TRANSISTORS",
-    "name": "Transistors"
+    "name": "TRANSISTORS",
+    "label": "Transistors"
   },
   {
-    "id": "TWINKIE",
-    "name": "Twinkie"
+    "name": "TWINKIE",
+    "label": "Twinkie"
   },
   {
-    "id": "UDCA",
-    "name": "UDAcid™ 300 Ursodeoxycholic Acid"
+    "name": "UDCA",
+    "label": "UDAcid™ 300 Ursodeoxycholic Acid"
   },
   {
-    "id": "UREA",
-    "name": "Urea"
+    "name": "UREA",
+    "label": "Urea"
   },
   {
-    "id": "URIC_ACID",
-    "name": "Uric Acid"
+    "name": "URIC_ACID",
+    "label": "Uric Acid"
   },
   {
-    "id": "VISOR",
-    "name": "Pod Visor"
+    "name": "VISOR",
+    "label": "Pod Visor"
   },
   {
-    "id": "WATER",
-    "name": "Water (H2O)"
+    "name": "WATER",
+    "label": "Water (H2O)"
   },
   {
-    "id": "WAX",
-    "name": "GulfWax Paraffin Wax"
+    "name": "WAX",
+    "label": "GulfWax Paraffin Wax"
   },
   {
-    "id": "XENOESTROGEN",
-    "name": "Xenoestrogen"
+    "name": "XENOESTROGEN",
+    "label": "Xenoestrogen"
   },
   {
-    "id": "YEAST",
-    "name": "Yeast"
+    "name": "YEAST",
+    "label": "Yeast"
   },
   {
-    "id": "ZOOPLANKTON",
-    "name": "Zooplankton"
+    "name": "ZOOPLANKTON",
+    "label": "Zooplankton"
   }
 ]
