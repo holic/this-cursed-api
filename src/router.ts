@@ -59,7 +59,16 @@ router.get("/materials", async () => {
 });
 
 router.get("/recipes", async () => {
-  return await getRecipes();
+  const { recipes } = await getRecipes();
+  return recipes;
+});
+
+router.get("/recipes/:material", async (req) => {
+  const { recipes } = await getRecipes();
+
+  return recipes.filter((recipe) =>
+    recipe.outputs.some((output) => output.name === req.params.material)
+  );
 });
 
 export default router;

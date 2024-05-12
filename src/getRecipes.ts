@@ -1,6 +1,6 @@
 import { config, machineType } from "./mud.config.js";
 import { fetchRecords } from "./fetchRecords.js";
-import { concatHex, keccak256 } from "viem";
+import { concatHex, keccak256, zeroHash } from "viem";
 import { getMaterials } from "./getMaterials.js";
 
 export async function getRecipes() {
@@ -31,17 +31,19 @@ export async function getRecipes() {
     .map((record) => {
       const machine = machineType[record.fields.machine];
 
-      const outputs = record.fields.outputs.map((output) =>
-        materials.find((material) => material.materialId === output)
-      );
+      const outputs = record.fields.outputs
+        .filter((output) => !/^0x0+$/.test(output))
+        .map((output) =>
+          materials.find((material) => material.materialId === output)
+        );
 
       const inputHash = record.fields.input;
-      const input = materialCombos.find(
+      const inputs = materialCombos.find(
         (combo) => combo.inputHash === inputHash
       )?.materials;
 
-      return { inputHash, input, machine, outputs };
+      return { inputHash, inputs, machine, outputs };
     });
 
-  return recipes;
+  return { recipes, materials };
 }
