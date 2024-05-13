@@ -55,7 +55,50 @@ router.get("/orders", async () => {
 });
 
 router.get("/materials", async () => {
-  return await getMaterials();
+  const { recipes, materials } = await getRecipes();
+
+  const costs = {
+    BUGS: 1,
+    PELLETS: 1,
+  };
+
+  function getMaterialCost(material, path: string[] = []) {
+    if (costs[material.name]) return costs[material.name];
+
+    const possibleRecipes = recipes
+      .filter((recipe) =>
+        recipe.outputs.some((output) => output.name === material.name)
+      )
+      // filter out recursive recipes
+      .filter((recipe) =>
+        recipe.inputs?.every((input) => !path.includes(input.name))
+      );
+
+    const recipeCosts = possibleRecipes.map((recipe) => {
+      const inputCosts = recipe.inputs?.map((input) =>
+        getMaterialCost(input, [input.name, ...path])
+      );
+      const inputCost = inputCosts?.reduce((next, sum) => sum + next, 0);
+      return inputCost * recipe.outputs.length;
+    });
+
+    const cheapest = recipeCosts.reduce(
+      (next, min) => Math.min(min, next),
+      Infinity
+    );
+
+    if (cheapest < Infinity) {
+      costs[material.name] = cheapest;
+    }
+    return cheapest;
+  }
+
+  return materials.map((material) => {
+    return {
+      ...material,
+      cost: getMaterialCost(material),
+    };
+  });
 });
 
 router.get("/recipes", async () => {
