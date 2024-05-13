@@ -3,6 +3,7 @@ import { config } from "./mud.config.js";
 import { fetchRecords } from "./fetchRecords.js";
 import { getRecipes } from "./getRecipes.js";
 import { getMaterials } from "./getMaterials.js";
+import { getStumps } from "./getStumps.js";
 
 const router = AutoRouter({
   format: createResponse("application/json; charset=utf-8", (data) =>
@@ -112,6 +113,10 @@ router.get("/recipes/:material", async (req) => {
   return recipes.filter((recipe) =>
     recipe.outputs.some((output) => output.name === req.params.material)
   );
+});
+
+router.get("/stumps", async () => {
+  return await getStumps();
 });
 
 export default router;

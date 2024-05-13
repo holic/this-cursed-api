@@ -66,5 +66,12 @@ export const config = defineWorld({
         outputs: "bytes14[2]",
       },
     },
+    Name: {
+      key: ["id"],
+      schema: {
+        id: "bytes32",
+        name: "string",
+      },
+    },
   },
 });
