@@ -70,7 +70,7 @@ export const config = defineWorld({
       key: ["id"],
       schema: {
         id: "bytes32",
-        value: "string",
+        name: "string",
       },
     },
   },
