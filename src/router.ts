@@ -61,6 +61,7 @@ router.get("/materials", async () => {
   const costs = {
     BUGS: 1,
     PELLETS: 1,
+    "SILICON WAFER": 1,
   };
 
   function getMaterialCost(material, path: string[] = []) {
