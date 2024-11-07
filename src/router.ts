@@ -42,17 +42,16 @@ router.get("/orders", async () => {
         material: materials.find(
           (material) => material.materialId === order.materialId
         ),
-        completed: completed?.count,
+        completed: completed?.count ?? 0,
         remaining: completed
           ? Math.max(0, order.maxPlayers - completed.count)
-          : undefined,
+          : order.maxPlayers,
       };
-    })
-    .filter(
-      (order) => order.remaining > 0 && order.expirationBlock > blockNumber
-    );
+    });
 
-  return orders;
+  return orders.filter(
+    (order) => order.remaining > 0 && order.expirationBlock > blockNumber
+  );
 });
 
 router.get("/materials", async () => {
